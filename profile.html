@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>个人信息 · 南山南的小天地</title>
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+<script src="auth.js"></script>
+<script>requireAuth();</script>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+
+<main class="profile-wrap">
+  <a class="back-link" href="index.html">返回首页</a>
+
+  <section class="profile-card">
+    <div class="avatar" id="avatar" aria-hidden="true"></div>
+    <h1 class="profile-name" id="username"></h1>
+
+    <dl class="profile-info">
+      <div>
+        <dt>用户 ID</dt>
+        <dd id="user-id"></dd>
+      </div>
+      <div>
+        <dt>注册时间</dt>
+        <dd id="joined"></dd>
+      </div>
+    </dl>
+
+    <button class="btn-ghost" id="logout" type="button">退出登录</button>
+  </section>
+</main>
+
+<script src="profile.js"></script>
+</body>
+</html>

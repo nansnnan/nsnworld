@@ -1,0 +1,13 @@
+name = "nansn-api"
+main = "index.js"
+compatibility_date = "2026-11-16"
+
+# 部署前用 `wrangler kv namespace create USERS` 创建命名空间，把返回的 id 填到下面。
+# 也可以直接在 Cloudflare 控制台的 Worker 设置里绑定 KV 变量名 USERS。
+[[kv_namespaces]]
+binding = "USERS"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+[vars]
+# 只允许你的站点域名调用接口，部署时改成 https://www.nansn.ccwu.cc
+ALLOWED_ORIGIN = "*"

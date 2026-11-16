@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登录 · 南山南的小天地</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+<div class="aurora" aria-hidden="true"></div>
+
+<main class="auth-wrap">
+  <section class="auth-card">
+    <h1 class="auth-brand">南山南的小天地</h1>
+    <p class="auth-sub">登录后进入这个小世界</p>
+
+    <div class="auth-tabs" role="tablist" aria-label="登录或注册">
+      <button class="auth-tab is-active" type="button" role="tab" aria-selected="true" data-mode="login">登录</button>
+      <button class="auth-tab" type="button" role="tab" aria-selected="false" data-mode="register">注册</button>
+    </div>
+
+    <form id="auth-form" novalidate>
+      <label class="field">
+        <span>用户名</span>
+        <input name="username" type="text" autocomplete="username" maxlength="16" placeholder="2-16 位，中英文或数字">
+      </label>
+      <label class="field">
+        <span>密码</span>
+        <input name="password" type="password" autocomplete="current-password" placeholder="至少 6 位">
+      </label>
+      <p class="auth-error" id="auth-error" role="alert"></p>
+      <button class="btn-primary" id="auth-submit" type="submit">登录</button>
+    </form>
+
+    <p class="auth-hint" id="auth-hint">还没有账号？点上方「注册」创建一个</p>
+  </section>
+</main>
+
+<script src="config.js"></script>
+<script src="auth.js"></script>
+<script src="login.js"></script>
+</body>
+</html>
